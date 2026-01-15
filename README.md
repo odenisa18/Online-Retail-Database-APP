@@ -66,63 +66,63 @@ Aplicația respectă strict arhitectura **MVVM**:
 RetailDB/
 │
 ├── Database/
-│ └── table_creation.sql
+│   └── table_creation.sql            # Script SQL pentru crearea tabelelor
 │
-├── Models/
-│ ├── RetailDB.edmx
-│ ├── User.cs
-│ ├── Item.cs
-│ ├── Order.cs
-│ ├── OrderDetail.cs
-│ ├── Category.cs
-│ ├── BankAccount.cs
-│ ├── BillingProfile.cs
-│ ├── Supplier.cs
-│ ├── Inventory.cs
-│ ├── ShoppingCartItem.cs
-│ ├── OrderStatus.cs
-│ └── Role.cs
+├── Models/                           # Entități Entity Framework (Database First)
+│   ├── RetailDB.edmx
+│   ├── User.cs
+│   ├── Item.cs
+│   ├── Order.cs
+│   ├── OrderDetail.cs
+│   ├── Category.cs
+│   ├── BankAccount.cs
+│   ├── BillingProfile.cs
+│   ├── Supplier.cs
+│   ├── Inventory.cs
+│   ├── ShoppingCartItem.cs
+│   ├── OrderStatus.cs
+│   └── Role.cs
 │
-├── ViewModels/
-│ ├── BaseViewModel.cs
-│ ├── MainViewModel.cs
-│ ├── LoginViewModel.cs
-│ ├── RegisterViewModel.cs
-│ ├── StoreViewModel.cs
-│ ├── CartViewModel.cs
-│ ├── CheckoutViewModel.cs
-│ ├── UserProductsViewModel.cs
-│ ├── OrderHistoryViewModel.cs
-│ ├── SalesHistoryViewModel.cs
-│ ├── AdminDashboardViewModel.cs
-│ ├── AdminUsersViewModel.cs
-│ └── AdminProductsViewModel.cs
+├── ViewModels/                       # Logică de prezentare (MVVM)
+│   ├── BaseViewModel.cs              # INotifyPropertyChanged
+│   ├── MainViewModel.cs              # Navigare și stare aplicație
+│   ├── LoginViewModel.cs
+│   ├── RegisterViewModel.cs
+│   ├── StoreViewModel.cs
+│   ├── CartViewModel.cs
+│   ├── CheckoutViewModel.cs
+│   ├── UserProductsViewModel.cs      # Dashboard vânzător
+│   ├── OrderHistoryViewModel.cs
+│   ├── SalesHistoryViewModel.cs
+│   ├── AdminDashboardViewModel.cs
+│   ├── AdminUsersViewModel.cs
+│   └── AdminProductsViewModel.cs
 │
-├── Views/
-│ ├── LoginView.xaml
-│ ├── RegisterView.xaml
-│ ├── StoreView.xaml
-│ ├── CartView.xaml
-│ ├── CheckoutView.xaml
-│ ├── UserProductsView.xaml
-│ ├── OrderHistoryView.xaml
-│ ├── SalesHistoryView.xaml
-│ ├── AdminDashboardView.xaml
-│ └── AdminProductsView.xaml
+├── Views/                            # Interfață utilizator (XAML)
+│   ├── LoginView.xaml
+│   ├── RegisterView.xaml
+│   ├── StoreView.xaml
+│   ├── CartView.xaml
+│   ├── CheckoutView.xaml
+│   ├── UserProductsView.xaml
+│   ├── OrderHistoryView.xaml
+│   ├── SalesHistoryView.xaml
+│   ├── AdminDashboardView.xaml
+│   └── AdminProductsView.xaml
 │
-├── Services/
-│ ├── AuthenticationService.cs
-│ └── UserSessionService.cs
+├── Services/                         # Logică de business
+│   ├── AuthenticationService.cs
+│   └── UserSessionService.cs
 │
-├── Utilities/
-│ ├── RelayCommand.cs
-│ ├── RoleTypes.cs
-│ └── PasswordBoxHelper.cs
+├── Utilities/                        # Clase utilitare
+│   ├── RelayCommand.cs               # ICommand pentru MVVM
+│   ├── RoleTypes.cs                  # Enum roluri utilizatori
+│   └── PasswordBoxHelper.cs          # Binding securizat pentru parole
 │
-├── App.xaml
-├── App.xaml.cs
-├── MainWindow.xaml
-└── RetailDB.sln
+├── App.xaml                          # Resurse globale și stiluri
+├── App.xaml.cs                       # Inițializare aplicație
+├── MainWindow.xaml                   # Fereastra principală
+└── RetailDB.sln                      # Soluția Visual Studio
 
 
 ---
